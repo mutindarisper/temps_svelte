@@ -19,12 +19,14 @@
 	"dependencies": {
 		"@emotion/react": "^11.11.3",
 		"@emotion/styled": "^11.11.0",
+		"@mui/icons-material": "^5.15.11",
 		"@mui/material": "^5.15.11",
-		"@mui/styled-engine-sc": "^6.0.0-alpha.17",
+		"@svelteuidev/composables": "^0.15.4",
+		"@svelteuidev/core": "^0.15.4",
 		"axios": "^1.6.7",
 		"chart.js": "^4.4.1",
 		"leaflet": "^1.9.4",
-		"styled-components": "^6.1.8",
-		"svelte-chartjs": "^3.1.5"
+		"svelte-chartjs": "^3.1.5",
+		"svelte-routing": "^2.12.0"
 	}
 }

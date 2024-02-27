@@ -11,20 +11,21 @@
     <Selections />
 </div>
 
-<div class="chart">
+<!-- <div class="chart">
     <Chart />
 
-</div>
+</div> -->
 
-<div> 
+<!-- <div> 
     
     <Leaflet  />
   
 
-</div>
+</div> -->
 
 <style>
-    .chart{
+      @import url('../app.css');
+    /* .chart{
         position: absolute;
         margin-top: 60vh;
         margin-left: 50vw;
@@ -33,6 +34,6 @@
     width:20vw;
     height: 30vh;
     font-family: Poppins;
-    }
+    } */
 
 </style>
