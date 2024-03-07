@@ -8,7 +8,7 @@
     nav {
       background-color: #7a7a7a;
       padding: 1em;
-      /* width:100%; */
+      width:100vw;
     }
   
     a {
