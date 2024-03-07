@@ -1,4 +1,5 @@
 <script>
+    import { setContext } from "svelte";
     import { Grid } from "@svelteuidev/core";
     import { NativeSelect, createStyles, Tabs } from "@svelteuidev/core";
     import { LocalHospital, School, DirectionsBus } from "@mui/icons-material";
@@ -6,9 +7,11 @@
     import Leaflet from "./Leaflet.svelte";
     import Navbar from "./Navbar.svelte";
     import Chart from "./Chart.svelte";
+    import Child from "./Child.svelte";
 
     // import { selectedOption } from "../store/selectionStore";
     import { appState } from "../store/selectionStore";
+    
 
     const useStyles = createStyles((theme) => ({
         root: {
@@ -30,23 +33,31 @@
 
     let selected;
     let selectedTab;
+    let message = "Parent Message!";
+    setContext('message', message);
+    $: setContext('selectedParentTab', appState)
+    $: setContext('selectedParentOption', appState)
 
     const handleTabChange = (event) => {
         // selectedOption.set(event.target.value ); //set the initial null value from the store to the new selected value
         console.log(event.detail);
+        $appState.selectedTab = event.detail.key
         appState.update((state) => ({
             ...state,
        
             selectedTab: event.detail.key,
+            // $: setContext('selectedParentTab', selectedTab)
         }));
     };
 
     const handleChange = (event) => {
         // Update the selectedOption property in the store
+        $appState.selectedOption = event.target.value;
         appState.update((state) => ({
             ...state,
             selectedOption: event.target.value,
             // selectedTab: event.detail,
+           
         }));
     };
 
@@ -58,7 +69,10 @@
     appState.subscribe((state) => {
         selected = state.selectedOption;
         selectedTab = state.selectedTab
+        
+       
     });
+
 </script>
 
 <div class="selections">
@@ -90,7 +104,12 @@
                         icon={DirectionsBus}
                     />
                 </Tabs>
+
+
+                <Child />
             </div>
+
+          
         </Grid.Col>
         <Grid.Col span={5} style="background-color:#F8F8F8; margin-top:1em">
             <!-- <NativeSelect
