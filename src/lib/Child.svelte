@@ -9,6 +9,6 @@
   <h4>I am a child</h4>
   
   <p>The message from the parent is: {childMessage}</p>
-  <p>Selected tab from parent is:{$contextTab.selectedTab}</p>
-  <p>Selected parent option:{$contextOption.selectedOption}</p>
+  <p>Selected parent tab : {$contextTab.selectedTab}</p>
+  <p>Selected parent option: {$contextOption.selectedOption}</p>
   

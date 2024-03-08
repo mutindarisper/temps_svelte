@@ -26,6 +26,7 @@
 		"axios": "^1.6.7",
 		"chart.js": "^4.4.1",
 		"leaflet": "^1.9.4",
+		"leaflet-draw": "^1.0.4",
 		"svelte-chartjs": "^3.1.5",
 		"svelte-routing": "^2.12.0"
 	}
