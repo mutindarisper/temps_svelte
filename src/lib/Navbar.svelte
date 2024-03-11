@@ -20,8 +20,8 @@
   </style>
   
   <nav>
-    <a to="/">Home</a>
-    <a to="/mapview">Dashboard</a>
-    <a to="/account">Account</a>
+    <a href="/">Home</a>
+    <a href="/mapview">Dashboard</a>
+    <a href="/account">Accounttttt</a>
   </nav>
   
